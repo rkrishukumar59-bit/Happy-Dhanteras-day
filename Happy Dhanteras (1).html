@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Dhanteras 🪙</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%}
+body{background:radial-gradient(ellipse at 50% 0%,#2a1250 0%,#120726 55%,#070312 100%);background-attachment:fixed;color:#fff;font-family:"Segoe UI",system-ui,-apple-system,"Noto Sans Devanagari",sans-serif;overflow:hidden;display:flex;justify-content:center;align-items:center;height:100dvh;padding:env(safe-area-inset-top,0px) 12px 70px}
+#bg{position:fixed;inset:0;width:100%;height:100%;z-index:0}
+.waves{position:fixed;left:0;right:0;bottom:0;height:60px;z-index:1;pointer-events:none;overflow:hidden}
+.wave{position:absolute;left:0;bottom:0;width:200%;height:100%;background-repeat:repeat-x;background-size:50% 100%}
+.wave.w1{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0 60 Q150 10 300 60 T600 60 T900 60 T1200 60 V120 H0Z' fill='%23ffc83a' fill-opacity='.28'/%3E%3C/svg%3E");animation:wv 9s linear infinite}
+.wave.w2{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0 70 Q150 30 300 70 T600 70 T900 70 T1200 70 V120 H0Z' fill='%2300e5ff' fill-opacity='.2'/%3E%3C/svg%3E");animation:wv 6s linear infinite reverse;bottom:-6px;filter:drop-shadow(0 -4px 10px rgba(0,229,255,.5))}
+.wave.w3{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0 80 Q150 50 300 80 T600 80 T900 80 T1200 80 V120 H0Z' fill='%23ff9d00' fill-opacity='.35'/%3E%3C/svg%3E");animation:wv 4s linear infinite;bottom:-10px;filter:drop-shadow(0 -4px 12px rgba(255,200,58,.6))}
+@keyframes wv{to{transform:translateX(-50%)}}
+.card{position:relative;z-index:2;width:100%;max-width:380px;max-height:calc(100dvh - 84px);padding:12px 12px 14px;text-align:center;background:linear-gradient(160deg,rgba(255,255,255,.14),rgba(255,255,255,.04));border:1px solid rgba(255,215,100,.4);border-radius:22px;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 10px 50px rgba(0,0,0,.55),0 0 40px rgba(255,190,40,.18),inset 0 1px 0 rgba(255,255,255,.25)}
+.hidden{display:none!important}
+.banner{margin:8px auto 0;text-align:center;cursor:pointer}
+.banner .nm{display:block;font-size:1.05rem;font-weight:800;word-break:break-word;background:linear-gradient(90deg,#ffd700,#ff9a1f,#fff0a8,#ffd700);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:flow 4s linear infinite}
+.banner .sub{display:block;font-size:.7rem;color:#ffe9a8}
+@keyframes pulse{0%,100%{transform:scale(1);box-shadow:0 5px 0 #a06a00,0 0 18px rgba(255,200,60,.55),inset 0 2px 6px rgba(255,255,255,.3)}50%{transform:scale(1.04);box-shadow:0 5px 0 #a06a00,0 0 34px rgba(255,220,90,.95),inset 0 2px 6px rgba(255,255,255,.3)}}
+@keyframes flow{to{background-position:300% 0}}
+.gif{display:block;width:auto;max-width:100%;max-height:28dvh;object-fit:contain;margin:0 auto;border-radius:14px;border:2px solid #ffd45a;box-shadow:0 0 26px rgba(255,200,60,.75),0 0 60px rgba(255,150,0,.3)}
+.ctl{margin-top:10px}.wish{margin:2px 2px 10px;font-size:.74rem;line-height:1.45;font-weight:800;background:linear-gradient(100deg,#ffe27a,#ff9a1f,#fff0a8,#ff7a00,#ffe27a);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:flow 5s linear infinite;filter:drop-shadow(0 0 8px rgba(255,160,0,.45))}
+input{width:100%;padding:10px 14px;font-size:.92rem;color:#fff;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,215,100,.55);border-radius:50px;outline:none;text-align:center;margin-bottom:8px;transition:.2s}
+input::placeholder{color:rgba(255,235,180,.65)}
+input:focus{border-color:#6df0ff;box-shadow:0 0 16px rgba(109,240,255,.6)}
+button{font-family:inherit;cursor:pointer;border:none}
+.gen{width:100%;padding:11px;font-size:.95rem;font-weight:800;color:#2a1250;border-radius:50px;background:linear-gradient(135deg,#ffe27a,#ffb400,#ff8a00);box-shadow:0 0 22px rgba(255,180,0,.75);animation:glow 1.8s ease-in-out infinite}
+@keyframes glow{50%{box-shadow:0 0 38px rgba(255,210,70,1);transform:scale(1.03)}}
+.wa{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:11px;font-size:.95rem;font-weight:800;color:#fff;border-radius:50px;background:linear-gradient(135deg,#25d366,#128c4a);box-shadow:0 0 22px rgba(37,211,102,.7);animation:wag 1.6s ease-in-out infinite}
+.wa svg{width:22px;height:22px;fill:#fff}
+@keyframes wag{0%,100%{transform:scale(1)}50%{transform:scale(1.04);box-shadow:0 0 36px rgba(37,211,102,1)}}
+.reset{margin-top:6px;background:none;color:#ffe9a8;font-size:.85rem;text-decoration:underline;padding:6px}
+.err{color:#ff8a8a;font-size:.85rem;margin:-4px 0 6px;min-height:0}
+#ad{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(8px + env(safe-area-inset-bottom,0px));z-index:3;width:320px;max-width:100%;height:50px;overflow:hidden}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+<canvas id="bg"></canvas>
+<div class="waves"><div class="wave w1"></div><div class="wave w2"></div><div class="wave w3"></div></div>
+
+<div id="ad">
+<script>
+  atOptions = {
+    'key' : 'bb7279e43516e5f414f0eff9ed35ec88',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/bb7279e43516e5f414f0eff9ed35ec88/invoke.js"></script>
+</div>
+<main class="card">
+  <img class="gif" src="Dhanteras.gif" alt="Happy Dhanteras" onerror="imgFail(this)">
+  <div id="banner" class="banner hidden" title="Naam badalne ke liye dabayein">
+    <span class="nm">✨ <span id="nameOut"></span> ✨</span>
+    <span class="sub">ki taraf se aapko aur aapke parivar ko</span>
+  </div>
+
+  <div class="ctl">
+    <input id="nameIn" type="text" maxlength="30" placeholder="Apna naam yahan likhein..." autocomplete="off" enterkeyhint="done">
+    <div id="err" class="err"></div>
+    <p class="wish">🪙 शुभ धनतेरस! 🏺 माँ लक्ष्मी और भगवान धन्वंतरि आपको सुख-समृद्धि दें! ✨</p>
+    <button class="wa" id="waBtn">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2c-1.5 0-2.9-.4-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.200z"/></svg>
+      Share on WhatsApp
+    </button>
+  </div>
+</main>
+
+<script>
+const ART="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20320%22%3E%0A%3Cdefs%3E%0A%3ClinearGradient%20id%3D%22bg%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232d1360%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230e0620%22%2F%3E%3C%2FlinearGradient%3E%0A%3CradialGradient%20id%3D%22gl%22%20cx%3D%22.5%22%20cy%3D%22.5%22%20r%3D%22.5%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23ffc83a%22%20stop-opacity%3D%22.55%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23ffc83a%22%20stop-opacity%3D%220%22%2F%3E%3C%2FradialGradient%3E%0A%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23fff0a8%22%2F%3E%3Cstop%20offset%3D%22.5%22%20stop-color%3D%22%23ffc21f%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23c47f00%22%2F%3E%3C%2FlinearGradient%3E%0A%3CradialGradient%20id%3D%22fl%22%20cx%3D%22.5%22%20cy%3D%22.7%22%20r%3D%22.6%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23fff7c2%22%2F%3E%3Cstop%20offset%3D%22.6%22%20stop-color%3D%22%23ffb300%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23ff6a00%22%2F%3E%3C%2FradialGradient%3E%0A%3C%2Fdefs%3E%0A%3Crect%20width%3D%22400%22%20height%3D%22320%22%20fill%3D%22url%28%23bg%29%22%2F%3E%0A%3Ccircle%20cx%3D%22200%22%20cy%3D%22170%22%20r%3D%22150%22%20fill%3D%22url%28%23gl%29%22%2F%3E%0A%3Ccircle%20cx%3D%2260%22%20cy%3D%2260%22%20r%3D%223%22%20fill%3D%22%23ffe27a%22%20opacity%3D%22.9%22%2F%3E%3Ccircle%20cx%3D%22340%22%20cy%3D%2280%22%20r%3D%223.5%22%20fill%3D%22%23ffe27a%22%20opacity%3D%22.9%22%2F%3E%3Ccircle%20cx%3D%2295%22%20cy%3D%22120%22%20r%3D%222.5%22%20fill%3D%22%23ffe27a%22%20opacity%3D%22.9%22%2F%3E%3Ccircle%20cx%3D%22310%22%20cy%3D%22140%22%20r%3D%222.5%22%20fill%3D%22%23ffe27a%22%20opacity%3D%22.9%22%2F%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%22180%22%20r%3D%222%22%20fill%3D%22%23ffe27a%22%20opacity%3D%22.9%22%2F%3E%3Ccircle%20cx%3D%22365%22%20cy%3D%22200%22%20r%3D%222.5%22%20fill%3D%22%23ffe27a%22%20opacity%3D%22.9%22%2F%3E%3Ccircle%20cx%3D%22150%22%20cy%3D%2245%22%20r%3D%222%22%20fill%3D%22%23ffe27a%22%20opacity%3D%22.9%22%2F%3E%3Ccircle%20cx%3D%22255%22%20cy%3D%2252%22%20r%3D%222.5%22%20fill%3D%22%23ffe27a%22%20opacity%3D%22.9%22%2F%3E%3Ccircle%20cx%3D%22330%22%20cy%3D%2230%22%20r%3D%222%22%20fill%3D%22%23ffe27a%22%20opacity%3D%22.9%22%2F%3E%3Ccircle%20cx%3D%2270%22%20cy%3D%2230%22%20r%3D%222%22%20fill%3D%22%23ffe27a%22%20opacity%3D%22.9%22%2F%3E%0A%3Ctext%20x%3D%22200%22%20y%3D%2240%22%20text-anchor%3D%22middle%22%20font-size%3D%2230%22%20font-weight%3D%22700%22%20fill%3D%22url%28%23g%29%22%20font-family%3D%22%27Noto%20Sans%20Devanagari%27%2C%27Nirmala%20UI%27%2Csans-serif%22%3E%E0%A4%B6%E0%A5%81%E0%A4%AD%20%E0%A4%A7%E0%A4%A8%E0%A4%A4%E0%A5%87%E0%A4%B0%E0%A4%B8%3C%2Ftext%3E%0A%3Cg%3E%0A%3Cpath%20d%3D%22M165%2078%20Q135%2055%20120%2070%20Q140%2092%20168%2088Z%22%20fill%3D%22%232ea84a%22%2F%3E%3Cpath%20d%3D%22M235%2078%20Q265%2055%20280%2070%20Q260%2092%20232%2088Z%22%20fill%3D%22%232ea84a%22%2F%3E%3Cpath%20d%3D%22M185%2072%20Q175%2042%20190%2036%20Q200%2058%20196%2080Z%22%20fill%3D%22%2335c256%22%2F%3E%3Cpath%20d%3D%22M215%2072%20Q225%2042%20210%2036%20Q200%2058%20204%2080Z%22%20fill%3D%22%2335c256%22%2F%3E%0A%3Ccircle%20cx%3D%22200%22%20cy%3D%2282%22%20r%3D%2220%22%20fill%3D%22%23c98a1a%22%20stroke%3D%22%238a5a00%22%20stroke-width%3D%222%22%2F%3E%3Cpath%20d%3D%22M188%2076%20Q200%2070%20212%2076%22%20stroke%3D%22%238a5a00%22%20stroke-width%3D%222%22%20fill%3D%22none%22%2F%3E%0A%3Cellipse%20cx%3D%22200%22%20cy%3D%22112%22%20rx%3D%2252%22%20ry%3D%2212%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%238a5a00%22%20stroke-width%3D%222%22%2F%3E%0A%3Cpath%20d%3D%22M156%20118%20Q150%20128%20160%20134%20Q110%20175%20140%20225%20Q170%20252%20200%20252%20Q230%20252%20260%20225%20Q290%20175%20240%20134%20Q250%20128%20244%20118%20Q200%20130%20156%20118Z%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%238a5a00%22%20stroke-width%3D%222%22%2F%3E%0A%3Cpath%20d%3D%22M150%20170%20Q200%20188%20250%20170%20L254%20186%20Q200%20206%20146%20186Z%22%20fill%3D%22%23d92b3a%22%2F%3E%0A%3Ccircle%20cx%3D%22170%22%20cy%3D%22184%22%20r%3D%223%22%20fill%3D%22%23ffe27a%22%2F%3E%3Ccircle%20cx%3D%22200%22%20cy%3D%22190%22%20r%3D%223%22%20fill%3D%22%23ffe27a%22%2F%3E%3Ccircle%20cx%3D%22230%22%20cy%3D%22184%22%20r%3D%223%22%20fill%3D%22%23ffe27a%22%2F%3E%0A%3Ctext%20x%3D%22200%22%20y%3D%22232%22%20text-anchor%3D%22middle%22%20font-size%3D%2226%22%20font-weight%3D%22700%22%20fill%3D%22%23b3202e%22%20font-family%3D%22%27Noto%20Sans%20Devanagari%27%2C%27Nirmala%20UI%27%2Csans-serif%22%3E%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%3C%2Ftext%3E%0A%3C%2Fg%3E%0A%3Cellipse%20cx%3D%2270%22%20cy%3D%22292%22%20rx%3D%2217%22%20ry%3D%227.7%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%238a5a00%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%2270%22%20cy%3D%22292%22%20rx%3D%2210.5%22%20ry%3D%224.4%22%20fill%3D%22none%22%20stroke%3D%22%23b07800%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22102%22%20cy%3D%22292%22%20rx%3D%2217%22%20ry%3D%227.7%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%238a5a00%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22102%22%20cy%3D%22292%22%20rx%3D%2210.5%22%20ry%3D%224.4%22%20fill%3D%22none%22%20stroke%3D%22%23b07800%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22135%22%20cy%3D%22292%22%20rx%3D%2217%22%20ry%3D%227.7%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%238a5a00%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22135%22%20cy%3D%22292%22%20rx%3D%2210.5%22%20ry%3D%224.4%22%20fill%3D%22none%22%20stroke%3D%22%23b07800%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22168%22%20cy%3D%22292%22%20rx%3D%2217%22%20ry%3D%227.7%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%238a5a00%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22168%22%20cy%3D%22292%22%20rx%3D%2210.5%22%20ry%3D%224.4%22%20fill%3D%22none%22%20stroke%3D%22%23b07800%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22200%22%20cy%3D%22292%22%20rx%3D%2217%22%20ry%3D%227.7%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%238a5a00%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22200%22%20cy%3D%22292%22%20rx%3D%2210.5%22%20ry%3D%224.4%22%20fill%3D%22none%22%20stroke%3D%22%23b07800%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22232%22%20cy%3D%22292%22%20rx%3D%2217%22%20ry%3D%227.7%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%238a5a00%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22232%22%20cy%3D%22292%22%20rx%3D%2210.5%22%20ry%3D%224.4%22%20fill%3D%22none%22%20stroke%3D%22%23b07800%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22265%22%20cy%3D%22292%22%20rx%3D%2217%22%20ry%3D%227.7%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%238a5a00%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22265%22%20cy%3D%22292%22%20rx%3D%2210.5%22%20ry%3D%224.4%22%20fill%3D%22none%22%20stroke%3D%22%23b07800%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22298%22%20cy%3D%22292%22%20rx%3D%2217%22%20ry%3D%227.7%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%238a5a00%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22298%22%20cy%3D%22292%22%20rx%3D%2210.5%22%20ry%3D%224.4%22%20fill%3D%22none%22%20stroke%3D%22%23b07800%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22330%22%20cy%3D%22292%22%20rx%3D%2217%22%20ry%3D%227.7%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%238a5a00%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22330%22%20cy%3D%22292%22%20rx%3D%2210.5%22%20ry%3D%224.4%22%20fill%3D%22none%22%20stroke%3D%22%23b07800%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%2285%22%20cy%3D%22281%22%20rx%3D%2217%22%20ry%3D%227.7%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%238a5a00%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%2285%22%20cy%3D%22281%22%20rx%3D%2210.5%22%20ry%3D%224.4%22%20fill%3D%22none%22%20stroke%3D%22%23b07800%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22118%22%20cy%3D%22281%22%20rx%3D%2217%22%20ry%3D%227.7%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%238a5a00%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22118%22%20cy%3D%22281%22%20rx%3D%2210.5%22%20ry%3D%224.4%22%20fill%3D%22none%22%20stroke%3D%22%23b07800%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22151%22%20cy%3D%22281%22%20rx%3D%2217%22%20ry%3D%227.7%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%238a5a00%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22151%22%20cy%3D%22281%22%20rx%3D%2210.5%22%20ry%3D%224.4%22%20fill%3D%22none%22%20stroke%3D%22%23b07800%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22184%22%20cy%3D%22281%22%20rx%3D%2217%22%20ry%3D%227.7%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%238a5a00%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22184%22%20cy%3D%22281%22%20rx%3D%2210.5%22%20ry%3D%224.4%22%20fill%3D%22none%22%20stroke%3D%22%23b07800%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22216%22%20cy%3D%22281%22%20rx%3D%2217%22%20ry%3D%227.7%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%238a5a00%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22216%22%20cy%3D%22281%22%20rx%3D%2210.5%22%20ry%3D%224.4%22%20fill%3D%22none%22%20stroke%3D%22%23b07800%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22249%22%20cy%3D%22281%22%20rx%3D%2217%22%20ry%3D%227.7%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%238a5a00%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22249%22%20cy%3D%22281%22%20rx%3D%2210.5%22%20ry%3D%224.4%22%20fill%3D%22none%22%20stroke%3D%22%23b07800%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22282%22%20cy%3D%22281%22%20rx%3D%2217%22%20ry%3D%227.7%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%238a5a00%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22282%22%20cy%3D%22281%22%20rx%3D%2210.5%22%20ry%3D%224.4%22%20fill%3D%22none%22%20stroke%3D%22%23b07800%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22315%22%20cy%3D%22281%22%20rx%3D%2217%22%20ry%3D%227.7%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%238a5a00%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22315%22%20cy%3D%22281%22%20rx%3D%2210.5%22%20ry%3D%224.4%22%20fill%3D%22none%22%20stroke%3D%22%23b07800%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22110%22%20cy%3D%22271%22%20rx%3D%2217%22%20ry%3D%227.7%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%238a5a00%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22110%22%20cy%3D%22271%22%20rx%3D%2210.5%22%20ry%3D%224.4%22%20fill%3D%22none%22%20stroke%3D%22%23b07800%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22146%22%20cy%3D%22271%22%20rx%3D%2217%22%20ry%3D%227.7%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%238a5a00%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22146%22%20cy%3D%22271%22%20rx%3D%2210.5%22%20ry%3D%224.4%22%20fill%3D%22none%22%20stroke%3D%22%23b07800%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22182%22%20cy%3D%22271%22%20rx%3D%2217%22%20ry%3D%227.7%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%238a5a00%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22182%22%20cy%3D%22271%22%20rx%3D%2210.5%22%20ry%3D%224.4%22%20fill%3D%22none%22%20stroke%3D%22%23b07800%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22218%22%20cy%3D%22271%22%20rx%3D%2217%22%20ry%3D%227.7%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%238a5a00%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22218%22%20cy%3D%22271%22%20rx%3D%2210.5%22%20ry%3D%224.4%22%20fill%3D%22none%22%20stroke%3D%22%23b07800%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22254%22%20cy%3D%22271%22%20rx%3D%2217%22%20ry%3D%227.7%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%238a5a00%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22254%22%20cy%3D%22271%22%20rx%3D%2210.5%22%20ry%3D%224.4%22%20fill%3D%22none%22%20stroke%3D%22%23b07800%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22290%22%20cy%3D%22271%22%20rx%3D%2217%22%20ry%3D%227.7%22%20fill%3D%22url%28%23g%29%22%20stroke%3D%22%238a5a00%22%20stroke-width%3D%221%22%2F%3E%3Cellipse%20cx%3D%22290%22%20cy%3D%22271%22%20rx%3D%2210.5%22%20ry%3D%224.4%22%20fill%3D%22none%22%20stroke%3D%22%23b07800%22%20stroke-width%3D%221%22%2F%3E%0A%3Cg%20id%3D%22d1%22%3E%3Cpath%20d%3D%22M40%20258%20Q75%20258%2078%20235%20L42%20235%20Q42%20252%2040%20258Z%22%20fill%3D%22%23e0701a%22%20stroke%3D%22%238a3a00%22%20stroke-width%3D%221.5%22%2F%3E%3Cellipse%20cx%3D%2260%22%20cy%3D%22235%22%20rx%3D%2219%22%20ry%3D%225%22%20fill%3D%22%23ffb347%22%2F%3E%3Cpath%20d%3D%22M60%20232%20Q50%20215%2060%20196%20Q70%20215%2060%20232Z%22%20fill%3D%22url%28%23fl%29%22%2F%3E%3Ccircle%20cx%3D%2260%22%20cy%3D%22214%22%20r%3D%2226%22%20fill%3D%22%23ffc83a%22%20opacity%3D%22.18%22%2F%3E%3C%2Fg%3E%0A%3Cg%20transform%3D%22translate%28280%200%29%22%3E%3Cpath%20d%3D%22M40%20258%20Q75%20258%2078%20235%20L42%20235%20Q42%20252%2040%20258Z%22%20fill%3D%22%23e0701a%22%20stroke%3D%22%238a3a00%22%20stroke-width%3D%221.5%22%2F%3E%3Cellipse%20cx%3D%2260%22%20cy%3D%22235%22%20rx%3D%2219%22%20ry%3D%225%22%20fill%3D%22%23ffb347%22%2F%3E%3Cpath%20d%3D%22M60%20232%20Q50%20215%2060%20196%20Q70%20215%2060%20232Z%22%20fill%3D%22url%28%23fl%29%22%2F%3E%3Ccircle%20cx%3D%2260%22%20cy%3D%22214%22%20r%3D%2226%22%20fill%3D%22%23ffc83a%22%20opacity%3D%22.18%22%2F%3E%3C%2Fg%3E%0A%3C%2Fsvg%3E";
+function imgFail(i){if(!i.dataset.s){i.dataset.s=1;i.src="Diwali.gif"}else{i.onerror=null;i.src=ART}}
+const $=id=>document.getElementById(id);
+
+let senderName="";
+function confirmName(){
+  const name=$("nameIn").value.trim();
+  if(!name){$("err").textContent="Pehle apna naam likhein.";return false}
+  senderName=name;
+  $("err").textContent="";
+  $("nameOut").textContent=name;
+  $("banner").classList.remove("hidden");
+  $("nameIn").classList.add("hidden");
+  $("err").classList.add("hidden");
+  $("nameIn").blur();
+  return true;
+}
+function editName(){
+  $("banner").classList.add("hidden");
+  $("nameIn").classList.remove("hidden");
+  $("err").classList.remove("hidden");
+  $("nameIn").focus();
+}
+function share(){
+  if(!$("nameIn").classList.contains("hidden")&&!confirmName())return;
+  const n=senderName.toUpperCase();
+  let msg="🪙 *शुभ धनतेरस!* 🏺\n\n✨ *"+n+"* ki taraf se aapko aur aapke parivar ko Dhanteras ki hardik shubhkamnayein! भगवान धन्वंतरि और माँ लक्ष्मी आपके जीवन में सुख, समृद्धि और अपार धन-वैभव लाएं! 🙏";
+  if(location.protocol.startsWith("http")){
+    msg+="\n\n👉 Aap bhi apna wish banayein:\n"+location.origin+location.pathname+"?name="+encodeURIComponent(senderName);
+  }
+  window.open("https://wa.me/?text="+encodeURIComponent(msg),"_blank");
+}
+$("nameIn").addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();confirmName()}});
+$("nameIn").addEventListener("input",()=>{$("err").textContent=""});
+$("banner").onclick=editName;
+$("waBtn").onclick=share;
+
+window.onload=function(){
+  try{
+    const p=new URLSearchParams(location.search).get("name");
+    if(p&&p.trim()){$("nameIn").value=p.trim().slice(0,30);confirmName()}
+  }catch(e){}
+};
+
+/* Canvas: ripples + rising gold coins/sparkles */
+const cv=$("bg"),cx=cv.getContext("2d");
+let W,H,ripples=[],parts=[];
+function size(){const d=window.devicePixelRatio||1;W=innerWidth;H=innerHeight;cv.width=W*d;cv.height=H*d;cx.setTransform(d,0,0,d,0,0)}
+addEventListener("resize",size);size();
+function ripple(x,y,big){ripples.push({x,y,r:2,max:big?160:90+Math.random()*70,a:.7})}
+function spawn(){
+  const coin=Math.random()<.4;
+  parts.push({x:Math.random()*W,y:H+10,s:coin?5+Math.random()*5:1.5+Math.random()*2.5,v:.4+Math.random()*1.1,ph:Math.random()*6.28,sw:.3+Math.random()*.8,coin,a:.4+Math.random()*.6,rot:Math.random()*6.28});
+}
+function press(e){const t=e.touches?e.touches[0]:e;ripple(t.clientX,t.clientY,true)}
+addEventListener("pointerdown",press);
+setInterval(()=>ripple(Math.random()*W,Math.random()*H*.9),1100);
+let last=0;
+function loop(t){
+  cx.clearRect(0,0,W,H);
+  for(let i=ripples.length-1;i>=0;i--){
+    const r=ripples[i];r.r+=1.6;r.a=.7*(1-r.r/r.max);
+    if(r.a<=0){ripples.splice(i,1);continue}
+    cx.lineWidth=2;
+    cx.strokeStyle="rgba(109,240,255,"+r.a+")";cx.beginPath();cx.arc(r.x,r.y,r.r,0,6.283);cx.stroke();
+    cx.strokeStyle="rgba(255,215,90,"+r.a*.8+")";cx.beginPath();cx.arc(r.x,r.y,r.r*.7,0,6.283);cx.stroke();
+  }
+  if(t-last>110&&parts.length<90){spawn();last=t}
+  for(let i=parts.length-1;i>=0;i--){
+    const p=parts[i];p.y-=p.v;p.ph+=.03;p.x+=Math.sin(p.ph)*p.sw;p.rot+=.05;
+    if(p.y<-20){parts.splice(i,1);continue}
+    const fade=Math.min(1,p.y/(H*.25))*p.a;
+    cx.save();cx.translate(p.x,p.y);
+    if(p.coin){
+      cx.scale(Math.abs(Math.cos(p.rot))*.8+.2,1);
+      cx.fillStyle="rgba(255,196,40,"+fade+")";cx.shadowColor="rgba(255,200,60,.9)";cx.shadowBlur=10;
+      cx.beginPath();cx.arc(0,0,p.s,0,6.283);cx.fill();
+      cx.strokeStyle="rgba(160,100,0,"+fade+")";cx.lineWidth=1;cx.beginPath();cx.arc(0,0,p.s*.6,0,6.283);cx.stroke();
+    }else{
+      cx.fillStyle="rgba(255,240,170,"+fade+")";cx.shadowColor="rgba(255,220,90,1)";cx.shadowBlur=8;
+      cx.beginPath();cx.arc(0,0,p.s,0,6.283);cx.fill();
+    }
+    cx.restore();
+  }
+  requestAnimationFrame(loop);
+}
+requestAnimationFrame(loop);
+</script>
+</body>
+</html>
